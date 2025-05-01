@@ -1,0 +1,88 @@
+/* Main container for testimonials */
+.testimonials {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 800px;
+  position: relative; /* Allow positioning of carousel controls */
+}
+
+/* Styling the testimonial card */
+.testimonial-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  z-index: 1; /* Keep the card above the carousel controls */
+}
+
+
+
+.testimonial-content {
+  max-width: 600px;
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.testimonial-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Carousel controls */
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 2; /* Controls in front of card */
+  width: 100%;
+}
+
+.prev-btn,
+.next-btn {
+  background: rgba(0, 0, 0, 0.5); /* Slightly darker background */
+  color: #fff;
+  border: none;
+  font-size: 1.5rem; /* Reduced font size */
+  padding: 8px 15px; /* Reduced padding */
+  cursor: pointer;
+  border-radius: 50%; /* Keeps them circular */
+  transition: background 0.3s ease;
+  opacity: 1; /* Ensure the buttons are visible */
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.prev-btn {
+  margin-left: 20px; /* Space from the left */
+}
+
+.next-btn {
+  margin-right: 20px; /* Space from the right */
+}
+/* Ensure the buttons appear above content */
+.testimonial-card {
+  z-index: 1; /* Keep testimonial card below controls */
+}

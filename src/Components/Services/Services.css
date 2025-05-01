@@ -1,0 +1,92 @@
+.services {
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
+
+.service-section {
+  margin-bottom: 40px;
+}
+
+.services{
+  text-align: center;
+}
+.service h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.service-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.image-container {
+  width: calc(33.333% - 20px); /* 3 images per row */
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden; /* Ensure images fit within container */
+}
+
+.image-container img {
+  width: 100%;
+  height: 200px; /* Fixed height to ensure images are the same size */
+  object-fit: cover; /* Ensures images cover the container evenly */
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgb(238, 227, 227);
+  
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    width: calc(50% - 10px); /* 2 images per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    width: 100%; /* 1 image per row on very small screens */
+  }
+}
+
+.see-more {
+  background-color: #007bff; /* Blue background color */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition on hover */
+}
+
+.see-more:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.see-more:focus {
+  outline: none; /* Remove the outline when focused */
+}
+
+.see-more:active {
+  background-color: #003d7a; /* Even darker blue when the button is pressed */
+}

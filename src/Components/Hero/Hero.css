@@ -1,0 +1,82 @@
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: url('../../assets/mold4.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+  padding: 0 20px; /* Add padding for small screens */
+}
+
+.hero-text {
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero-text h1,
+.hero-text p {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  overflow: hidden; /* Hide overflowed text */
+  white-space: nowrap; /* Prevent text from wrapping */
+  border-right: 3px solid black; /* Cursor effect */
+  width: 0; /* Start with no width */
+  animation: typing 4s steps(30) infinite, blinkCaret 0.75s step-end infinite; /* Make it infinite */
+}
+
+.hero-text h1 {
+  font-size: 40px;
+}
+
+.hero-text p {
+  max-width: 700px;
+  font-size: 26px;
+  margin: 10px auto;
+  line-height: 1.4;
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Caret blinking animation */
+@keyframes blinkCaret {
+  50% {
+    border-color: transparent; /* Hide caret in the middle of the cycle */
+  }
+}
+
+.btn {
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #1276e0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  margin-top: 20px; /* Space the button from the text */
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+

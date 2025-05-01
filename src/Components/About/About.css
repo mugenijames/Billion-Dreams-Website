@@ -1,0 +1,55 @@
+/* General Layout */
+.about {
+    margin: 80px auto;
+    display: flex;
+    width: 90%;
+    gap: 20px; /* Space between the image and text */
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+    justify-content: center; /* Centers the content horizontally */
+}
+
+.about-left {
+    flex: 1; /* Flex-grow to take available space */
+}
+
+.about-right {
+    flex: 1; /* Same flex-grow for image */
+    max-width: 500px; /* Optional: Ensure the image section has a limit */
+}
+
+/* Text Styling */
+.about h3 {
+    font-size: 24px; /* Larger size for better emphasis */
+    font-weight: 600;
+    color: #333; /* Darker color for headings */
+    margin-bottom: 10px;
+    text-align: center; /* Center-align headings */
+}
+
+.about p {
+    font-size: 16px; /* Reduced font size for readability */
+    font-weight: 400; /* Normal font weight for body text */
+    line-height: 1.6; /* Add line height for better spacing */
+    color: #555; /* Muted color for text */
+    margin-bottom: 15px;
+}
+
+/* Image Styles */
+.about img {
+    width: 100%;
+    height: auto; /* Ensure the image scales correctly */
+    border-radius: 8px; /* Optional: Round the corners of the image */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; /* Stack sections vertically for small screens */
+        text-align: center; /* Center-align content */
+    }
+
+    .about-left,
+    .about-right {
+        max-width: 100%; /* Ensure both parts take full width on small screens */
+    }
+}
