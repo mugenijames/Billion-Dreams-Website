@@ -23,6 +23,9 @@ import mold3 from '../../assets/mold3.jpeg';
 import architect_design1 from '../../assets/architect-design1.jpg';
 import architect_design2 from '../../assets/architect-design2.png';
 import architect_design3 from '../../assets/architect-design3.jpg';
+import brick_making from '../../assets/brick-making.jpg';
+import brick_preparation from '../../assets/brick-preparation.jpg';
+import hardcore from '../../assets/hardcore.jpg';
 
 const servicesData = [
   {
@@ -88,6 +91,9 @@ const servicesData = [
       { src: cabro, caption: 'Cabro blocks' },
       { src: cabro3, caption: 'Interlocking cabro' },
       { src: sand_ballast, caption: 'Sand and ballast supply' },
+      { src: brick_making, caption: 'Making Bricks' },
+      { src: brick_preparation, caption: 'Preparing Bricks to be ready for the supply and use' },
+      { src: hardcore, caption: 'HardCore/Rough Stones' },
     ],
   },
 ];

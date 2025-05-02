@@ -8,6 +8,7 @@ import Projects from "./Components/Projects/Projects";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import Team from "./Components/Team/Team";
 
 const App = () => {
   return (
@@ -19,6 +20,12 @@ const App = () => {
       <section>
         <Title subTitle="About Us" />
         <About />
+        
+      </section>
+      {/* Team Section */}
+      <section>
+        <Title subTitle="Our Team" />
+        <Team />
       </section>
 
       {/* Services Section */}

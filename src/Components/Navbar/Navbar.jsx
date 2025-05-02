@@ -6,7 +6,7 @@ const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false); // State to toggle menu visibility
 
-  // Effect to handle scroll event and update sticky state
+  
   useEffect(() => {
     const handleScroll = () => {
       setSticky(window.scrollY > 50); // Check if scroll position is > 50px
@@ -14,7 +14,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener when the component unmounts
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -23,6 +23,11 @@ const Navbar = () => {
   // Toggle the mobile menu visibility
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  // Close the menu when a link is clicked
+  const handleLinkClick = () => {
+    setMenuOpen(false);
   };
 
   return (
@@ -39,13 +44,14 @@ const Navbar = () => {
       </button>
 
       {/* Navigation links */}
-      <ul className={`${menuOpen ? 'active' : ''}`}>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">Who We Are</a></li>
-        <li><a href="#services">Our Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Reach Us</a></li>
+      <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+        <li><a href="#hero" onClick={handleLinkClick}>Home</a></li>
+        <li><a href="#about" onClick={handleLinkClick}>Who We Are</a></li>
+        <li><a href="#team" onClick={handleLinkClick}>Our Team</a></li>
+        <li><a href="#services" onClick={handleLinkClick}>Our Services</a></li>
+        <li><a href="#projects" onClick={handleLinkClick}>Projects</a></li>
+        <li><a href="#testimonials" onClick={handleLinkClick}>Testimonials</a></li>
+        <li><a href="#contact" onClick={handleLinkClick}>Reach Us</a></li>
       </ul>
     </nav>
   );
