@@ -3,7 +3,7 @@
     color: rgb(14, 13, 13);
     font-size: 18px;
     font-weight: 900;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin: 70px 0 30px;
 }
 .title h3{

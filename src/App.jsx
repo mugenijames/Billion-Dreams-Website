@@ -18,19 +18,19 @@ const App = () => {
 
       {/* About Section */}
       <section>
-        <Title subTitle="About Us" />
+        <Title subTitle="" />
         <About />
-        
+
       </section>
       {/* Team Section */}
       <section>
-        <Title subTitle="Our Team" />
+        <Title subTitle="" />
         <Team />
       </section>
 
       {/* Services Section */}
       <section>
-        <Title subTitle="Our Services" />
+        <Title subTitle="What We Offer" />
         <Services />
       </section>
 
@@ -42,7 +42,7 @@ const App = () => {
 
       {/* Testimonials Section */}
       <section>
-        <Title subTitle="Testimonials" />
+        <Title subTitle="" />
         <Testimonials />
       </section>
 
