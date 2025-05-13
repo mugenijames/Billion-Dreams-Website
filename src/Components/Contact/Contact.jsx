@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css"; // Ensure that the custom styles are imported
-
+// import telephone from "../../assets/telephone-719703.png"; 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
@@ -17,17 +17,28 @@ export default function ContactUs() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      // Mock API call
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API delay
-      setResponseMessage(
-        "Thank you for contacting us! We will get back to you soon."
-      );
-      setFormData({ name: "", email: "", subject: "", message: "" });
+        const response = await fetch('http://localhost:3000/api/messages', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+            const result = await response.json();
+            setResponseMessage(result.message);
+            setFormData({ name: "", email: "", subject: "", message: "" });
+        } else {
+            setResponseMessage('Failed to send the message. Please try again.');
+        }
     } catch (error) {
-      setResponseMessage("Oops! Something went wrong. Please try again.");
+        console.error('Error:', error);
+        setResponseMessage('An error occurred. Please try again.');
     }
-  };
+};
 
   return (
     <div className="contact-container">
@@ -35,9 +46,7 @@ export default function ContactUs() {
         <h2>Contact Details</h2>
         <p>Feel free to reach out to us via the following details:</p>
         <div>
-          <p>
-            <strong>Phone:</strong> +1 (234) 567-8900
-          </p>
+         
           <p>
             <strong>Email:</strong> okida@infobuilders.com
           </p>

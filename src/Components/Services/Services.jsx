@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import './Services.css';
 import renov1 from '../../assets/renov1.jpeg';
 import renov2 from '../../assets/renov2.jpg';
@@ -20,9 +21,16 @@ import landscape3 from '../../assets/landscaping3.jpg';
 import mold1 from '../../assets/mold1.jpeg';
 import mold2 from '../../assets/mold2.jpeg';
 import mold3 from '../../assets/mold3.jpeg';
+import mold4 from '../../assets/mold4.jpeg';
+import mold5 from '../../assets/mold5.jpg';
 import architect_design1 from '../../assets/architect-design1.jpg';
 import architect_design2 from '../../assets/architect-design2.png';
 import architect_design3 from '../../assets/architect-design3.jpg';
+import architect_design4 from '../../assets/architect-design4.jpg';
+import architect_design5 from '../../assets/architect-design5.jpg';
+import architect_design5b from '../../assets/architect-design5b.jpg';
+import architect_design6a from '../../assets/architect-design6a.jpg';
+import architect_design6b from '../../assets/architect-design6b.jpg';
 import brick_making from '../../assets/brick-making.jpg';
 import brick_preparation from '../../assets/brick-preparation.jpg';
 import hardcore from '../../assets/hardcore.jpg';
@@ -55,6 +63,11 @@ const servicesData = [
       { src: architect_design1, caption: '3D architectural design' },
       { src: architect_design2, caption: 'Blueprint preparation' },
       { src: architect_design3, caption: 'Modern house design' },
+      { src: architect_design4, caption: 'Modern house design' },
+      { src: architect_design5, caption: 'Modern house design' },
+      { src: architect_design5b, caption: 'Modern house design' },
+      { src: architect_design6a, caption: 'Modern house design' },
+      { src: architect_design6b, caption: 'Modern house design' },
     ],
   },
   {
@@ -73,6 +86,8 @@ const servicesData = [
       { src: mold1, caption: 'Custom molding design for the mansion' },
       { src: mold2, caption: 'Molding design for the gate' },
       { src: mold3, caption: 'Window molding' },
+      { src: mold4, caption: 'Window molding' },
+      { src: mold5, caption: 'Window molding' },
     ],
   },
   {
@@ -101,6 +116,7 @@ const servicesData = [
 const Services = () => {
   const [expandedSections, setExpandedSections] = useState({});
 
+  
   const toggleExpand = (index) => {
     setExpandedSections((prev) => ({
       ...prev,
