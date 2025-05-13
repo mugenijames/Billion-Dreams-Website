@@ -15,10 +15,11 @@ const Hero = () => {
       <div className="hero-text">
         <h1>Welcome to Okida Building and Construction Limited</h1>
         <p>Build Your Dreams Into Reality at a friendly price with us</p>
-        <button className="btn" onClick={scrollToProjects}>
+        
+      </div>
+      <button className="btn" onClick={scrollToProjects}>
           Explore More
         </button>
-      </div>
     </div>
   );
 };

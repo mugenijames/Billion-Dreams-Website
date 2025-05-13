@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <h3 className="footer-logo">Okida Builders Lmt.</h3>
+          <h3 className="footer-logo">Okida Builders Ltd.</h3>
           <p className="footer-description">
             Providing quality construction services for over 20 years.
           </p>
